@@ -1,56 +1,115 @@
+import {
+  Eye,
+  ListChecks,
+  Brain,
+  Zap,
+  Users,
+  Trophy,
+  MessageCircle,
+  CalendarClock,
+  BarChart3,
+  ShieldCheck,
+  Award,
+} from "lucide-react";
 import { ComponentType } from "react";
-import { Eye, ListChecks, Brain, Zap, Users, Trophy } from "lucide-react";
 
 export interface WhyChooseItem {
   id: number;
   title: string;
   description: string;
-  icon: ComponentType<Record<string, unknown>>;
+  icon: ComponentType<{ className?: string }>;
+  side: "left" | "right";
 }
 
-export const whyChooseData: WhyChooseItem[] = [
+const whyChooseData: WhyChooseItem[] = [
   {
     id: 1,
     title: "Strict Monitoring",
     icon: Eye,
+    side: "left",
     description:
-      "Tracks learning progress and platform activity in real time. Ensures course completion, engagement, and assessment quality. Helps identify learning gaps early across different streams and institutions.",
+      "Tracks learning progress and platform activity in real time to ensure consistency, focus, and quality outcomes.",
   },
   {
     id: 2,
     title: "Structured Learning",
     icon: ListChecks,
+    side: "right",
     description:
-      "Provides well-organized courses with clear learning paths. Supports step-by-step progress and connects learning with real-world skills for consistent growth.",
+      "Clear, step-by-step learning paths designed to build skills progressively and practically.",
   },
   {
     id: 3,
     title: "Natural Intelligence",
     icon: Brain,
+    side: "left",
     description:
-      "Encourages thinking, creativity, and problem-solving. Focuses on understanding concepts rather than memorization and builds strong foundations across domains.",
+      "Encourages critical thinking, creativity, and real understanding instead of rote memorization.",
   },
   {
     id: 4,
     title: "Active Engagement",
     icon: Zap,
+    side: "right",
     description:
-      "Promotes interactive learning through tasks and real-world activities. Encourages participation, practice, and hands-on learning experiences.",
+      "Interactive tasks, challenges, and hands-on activities that keep learners actively involved.",
   },
   {
     id: 5,
     title: "Community Learning",
     icon: Users,
+    side: "left",
     description:
-      "Builds a collaborative environment through discussions, shared knowledge, and mentorship. Learning grows stronger through collective experience.",
+      "Peer discussions, shared learning, and mentor support to grow together as a community.",
   },
   {
     id: 6,
-    title: "Gamified Engagement Loops",
+    title: "Gamified Engagement",
     icon: Trophy,
-
+    side: "right",
     description:
-      "Makes learning fun with points, badges, and leaderboards. Motivates consistency, participation, and long-term engagement.",
+      "Points, badges, and leaderboards that motivate consistency and long-term learning habits.",
+  },
+  {
+    id: 7,
+    title: "Context-Aware Discussion Forums",
+    icon: MessageCircle,
+    side: "left",
+    description:
+      "Ask doubts directly inside lessons, videos, or quizzes with discussions tied to specific content.",
+  },
+  {
+    id: 8,
+    title: "Scheduled 1:1 Mentorship",
+    icon: CalendarClock,
+    side: "right",
+    description:
+      "Book one-on-one sessions with mentors for deeper guidance based on your learning progress.",
+  },
+  {
+    id: 9,
+    title: "User Skill Points",
+    icon: BarChart3,
+    side: "left",
+    description:
+      "Skill-based points track engagement, logic, and consistency—shown visually in your profile.",
+  },
+  {
+    id: 10,
+    title: "Verified Talent Pool",
+    icon: ShieldCheck,
+    side: "right",
+    description:
+      "Recruiters access verified skill profiles, real scores, and project proof—not just resumes.",
+  },
+  {
+    id: 11,
+    title: "Certificates & Smart Portfolio",
+    icon: Award,
+    side: "left",
+    description:
+      "Auto-generated online resume, portfolio, and digital certificates with verifiable skill data.",
   },
 ];
+
 export default whyChooseData;

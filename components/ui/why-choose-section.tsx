@@ -1,6 +1,6 @@
-import whyChooseData from "@/data/why-choose-data";
+import whyChooseData from "@/data/whyChooseData";
 
-export default function WhyCyberDude() {
+export default function WhyChooseSection() {
   return (
     <section className=" relative  ">
       <div className="container mx-auto py-10 px-3">
@@ -10,7 +10,7 @@ export default function WhyCyberDude() {
 
         <div className="relative max-w-6xl mx-auto">
           {/* Vertical line */}
-          <div className="absolute left-1/2 top-0 h-full w-[2px] -translate-x-1/2 bg-gradient-to-b from-transparent via-orange-500 to-transparent shadow-[0_0_25px_#f97316]" />
+          <div className="absolute left-1/2 top-0 h-full w-[2px] -translate-x-1/2 bg-linear-to-b from-transparent via-orange-500 to-transparent shadow-[0_0_25px_#f97316]" />
 
           <div className="space-y-20">
             {whyChooseData.map((item) => {
